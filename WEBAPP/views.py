@@ -153,6 +153,7 @@ def data_preparation():
     def add_region(text):
         return text.split(":")[2]
 
+    no_coords = no_coords.droopna()
     no_coords['loc_name'] = no_coords['coords'].apply(add_location_name)
     no_coords['region_name'] = no_coords['coords'].apply(add_region)
     # no_coords['region_id'] = no_coords['region_name'].apply(add_region_id)
