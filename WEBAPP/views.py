@@ -132,7 +132,7 @@ def data_preparation():
                 if n_gram == 3:
                     return np.NaN
                 n_gram += 1
-            if index_loc == -1 and n_gram == 3:
+            if index_loc == -1 and n_gram == 2:
                 return np.NaN
             sz = len(json_city["features"][int(index_loc)]["geometry"]["coordinates"])
             sz2 = json_city["features"][int(index_loc)]["geometry"]["coordinates"][np.random.randint(sz)]
